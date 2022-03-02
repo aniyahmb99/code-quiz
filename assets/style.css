@@ -1,0 +1,80 @@
+:root {
+    --primary-color: white;
+    --secondary-color: black;
+    --tertiary-color: #c511f2;
+}
+body {
+    font-family: Helvetica, Arial, sans-serif; 
+}
+.nav-bar {
+    position: -webkit-sticky;
+}
+
+.score-box-style a {
+    align-content: center;
+    font-weight: 500;
+    color: var(--tertiary-color);
+}
+
+#score-box-container {
+    display: inline-flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    float: inline-start;
+    height: 80px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.time-box-style {
+    align-content: center;
+    font-weight: 500;
+}
+
+time .score-box-style {
+    align-content: center;
+    font-weight: 500;
+}
+
+#time-box-container {
+    display: inline-flex;
+    margin-top: 10px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    height: 10px;
+    width: 1;
+  
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-weight: normal;
+}
+
+#question-container {
+
+}
+ .p-text-style {
+
+ }
+
+ #p-container {
+
+ }
+
+button {
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
+    border-radius: 10px 10px 10px 10px;
+    border-color: var(--primary-color);
+    height: 30px;
+    width: 1;
+    align-content: center;
+}
