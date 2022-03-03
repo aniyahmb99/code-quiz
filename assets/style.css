@@ -1,7 +1,7 @@
 :root {
     --primary-color: white;
     --secondary-color: black;
-    --tertiary-color: #c511f2;
+    --tertiary-color: magenta;
 }
 body {
     font-family: Helvetica, Arial, sans-serif; 
@@ -9,34 +9,35 @@ body {
 .nav-bar {
     position: -webkit-sticky;
 }
-
+a {
+    color: var(--tertiary-color);
+    text-decoration: none;
+    font-size: 20px;
+}
 .score-box-style a {
     align-content: center;
     font-weight: 500;
     color: var(--tertiary-color);
+    
 }
 
 #score-box-container {
     display: inline-flex;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
     float: inline-start;
     height: 80px;
     margin-top: 20px;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
-.time-box-style {
+.time-style {
     align-content: center;
-    font-weight: 500;
+    font-size: 20px;
 }
 
-time .score-box-style {
-    align-content: center;
-    font-weight: 500;
-}
 
 #time-box-container {
     display: inline-flex;
@@ -45,36 +46,62 @@ time .score-box-style {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    position: relative;
+    position: absolute;
     height: 10px;
     width: 1;
-  
+    top: 20px;
+    right: 20px;
 }
 
 .title {
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+#question-container {
     display: flex;
     justify-content: center;
     align-content: center;
     font-weight: normal;
 }
-
-#question-container {
-
-}
- .p-text-style {
-
+ p {
+     margin: auto;
+    text-align: center;
+    font-size: 20px;
+    align-content: center;
+    padding: 20px;
  }
 
  #p-container {
-
+    margin: auto;
+    width: 45%;
+    position: relative;
+    display: flex;
+    align-content: center;
+    height: 60px;
  }
 
 button {
-    color: var(--primary-color);
-    background-color: var(--tertiary-color);
+    display: block;
+    margin: auto;
+    color: white;
+    background-color: purple;
     border-radius: 10px 10px 10px 10px;
-    border-color: var(--primary-color);
-    height: 30px;
-    width: 1;
+    border-color: white;
+    position: relative;
     align-content: center;
+    width: 90px;
+    
+}
+
+button:hover {
+    background-color: magenta;
+}
+
+.button-style {
+ height: 60px;
+ width: 150px;
+ font-size: 18px;
+ padding-top: 5px 0 10px 0;
+ text-align: center;
 }
