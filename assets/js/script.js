@@ -5,63 +5,47 @@ let questions = ["Arrays in Javascript can be used to store ____________.",
 
 let startBtn = document.querySelector("#startBtnId");
 let time = document.querySelector("h3");
-let timeSecond = 120;
+let timeSecond = 60;
+let timeMinute = 2;
 
 time.innerHTML = '00:${timeSecond}';
-
-let countDown = setInterval(()=>{
-    timeSecond--;
-    time.innerHTML = '00.${timeSecond}';
-    if (timeSecond <= 0 || timeSecond < 1) {
-        clearInterval(countDown)
-    }
-}, 1000)
-
-//let timer = select("#timer");
-//timer.html(timeLeft - counter);
+time.innerHTML = '${timeMinute}:00';
 
 
 
+function handleTime() {
+    let countDown = setInterval(() => {
+        timeSecond--;
+        time.innerHTML = `00\:${timeSecond}`;
 
-    
+        if (timeSecond <= 0 || timeSecond < 1) {
+            clearInterval(countDown)
+        }
+    }, 1000);
+
+    let countDownMinute = setInterval(() => {
+        timeMinute--;
+        time.innerHTML = `${timeMinute}\:00`;
+
+        if (timeMinute <= 0 || timeMinute < 1) {
+            clearInterval(countDownMinute)
+        }
+    }, 60000);
+}
+
+
+
 function startQuiz() {
     let message = "Begin!";
     alert(message);
+    document.getElementById("paragraphContainer").style.visibility = "hidden";
+    document.getElementById("paragraphContainer").innerHTML = questions;
 
 
-   function startQuestions() {
-    
-    for (i=0; i < questions.length; i++) {
-        if (questions[i].match(myRegex));
-    }}
 
 }
 
-function timeIt() {
-
-    }
-
-    
-
-startBtn.addEventListener("click", startQuiz, setInterval);
 
 
+startBtn.addEventListener("click", startQuiz, handleTime);
 
-
-// <button class="startBtnStyle" id="startBtnId" type="button">Start Quiz</button>
-
-
-
-
-// // Write password to the #password input
-// function writePassword() {
-//     var password = generatePassword();
-//     var passwordText = document.querySelector("#password");
-  
-//     passwordText.value = password;
-  
-
-//   }
-  
-//   // Add event listener to generate button
-//   generateBtn.addEventListener("click", writePassword);

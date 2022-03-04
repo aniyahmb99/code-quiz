@@ -75,7 +75,7 @@ h3 .time_style {
     padding: 20px;
  }
 
- #p-container {
+ #paragraphContainer {
     margin: auto;
     width: 80%;
     display: flex;
@@ -106,7 +106,7 @@ button:hover {
 .startBtnStyle {
  height: 60px;
  width: 150px;
- font-size: 18px;
+ font-size: 20px;
  padding-top: 5px 0 10px 0;
  text-align: center;
  line-height: 1.5;
