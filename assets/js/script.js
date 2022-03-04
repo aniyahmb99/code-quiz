@@ -5,32 +5,23 @@ let questions = ["Arrays in Javascript can be used to store ____________.",
 
 let startBtn = document.querySelector("#startBtnId");
 let time = document.querySelector("h3");
-let timeSecond = 60;
-let timeMinute = 2;
+let timeSecond = 120;
 
-time.innerHTML = '00:${timeSecond}';
-time.innerHTML = '${timeMinute}:00';
+
+
+
 
 
 
 function handleTime() {
     let countDown = setInterval(() => {
         timeSecond--;
-        time.innerHTML = `00\:${timeSecond}`;
+        time.innerHTML = `\:${timeSecond}`;
 
         if (timeSecond <= 0 || timeSecond < 1) {
             clearInterval(countDown)
         }
     }, 1000);
-
-    let countDownMinute = setInterval(() => {
-        timeMinute--;
-        time.innerHTML = `${timeMinute}\:00`;
-
-        if (timeMinute <= 0 || timeMinute < 1) {
-            clearInterval(countDownMinute)
-        }
-    }, 60000);
 }
 
 
@@ -41,11 +32,11 @@ function startQuiz() {
     document.getElementById("paragraphContainer").style.visibility = "hidden";
     document.getElementById("paragraphContainer").innerHTML = questions;
 
-
+    handleTime();
 
 }
 
 
 
-startBtn.addEventListener("click", startQuiz, handleTime);
+startBtn.addEventListener("click", startQuiz);
 
