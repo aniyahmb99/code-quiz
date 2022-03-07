@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Code Quiz</title>
 </head>
+
 <body>
-    
+    <div>
+        <div class="nav-bar">
+            <div id="score-box-container">
+                <a href="#" class="score-box-style">View high scores</a>
+            </div>
+            <div class="test" id="time-box-container">
+                <h3 class="time_style" id="timer">Time: 0</time>
+            </div>
+        </div>
+        <div class="title" id="question-container">
+            <div id="headingContainer2">
+                <h1 id="heading1">Coding Quiz Challenge</h1>
+            </div>
+        </div>
+        <p class="p-text-style" id="paragraphContainer">
+            Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
+            answers will penalize your score/time by ten seconds!</p>
+        </p>
+
+        <button class="startBtnStyle" id="startBtnId" type="button">Start Quiz</button>
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
+
 </html>
